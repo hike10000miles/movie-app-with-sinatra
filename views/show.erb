@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Viewing Contact <%= @movie.id %></h1>
+
+		Title: <%= @movie.title %> 
+		Director: <%= @movie.director %>
+		Rating: <%= @movie.rating%>
+
+	<p>
+  		<form action="/movies/<%= @movie.id %>" method="post">
+    		<input type="hidden" name="_method" value="delete" />
+    		<input type="submit" value="Delete" />
+  		</form>
+	</p>
+
+	<p><a href="/">Back to All Movies</a></p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="/movies/<%= @movie.id %>" method="post">
+    	<input type="hidden" name="_method" value="patch" />
+  			Title: <input type="text" name="title" value="<%= @movie.title %>"><br/>
+  			Director: <input type="text" name="director" value="<%= @movie.director %>">
+  			Rating: <input type="text" name="rating" value="<%= @movie.rating %>">
+  		<input type="submit" />
+	</form>
+</body>
+</html>
