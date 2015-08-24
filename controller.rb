@@ -28,9 +28,11 @@ end
 # Create route to update movie when edit form is submitted
 patch "/movies/:id" do
   @movie = Movie.find(params[:id].to_i)
-  @movie.title = params[:title]
-  @movie.director = params[:director]
-  @movie.rating = params[:rating]
+   @movie.update ({
+      title: params[:title],
+      director: params[:director],
+      rating: params[:rating]
+  })
   redirect "/"
 end
 # Create route to delete a movie 
